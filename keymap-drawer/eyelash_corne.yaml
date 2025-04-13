@@ -29,7 +29,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: RMETA, s: ':'}
   - {t: '''', s: '"'}
-  - CLCK
+  - '&td0'
   - Z
   - X
   - C
