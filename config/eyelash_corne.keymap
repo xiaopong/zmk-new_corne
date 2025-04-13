@@ -35,6 +35,23 @@
         };
     };
 
+    macros {
+        mc_smaller_equal : mc_smaller_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            binding =
+                <&macro-tap>,
+                <&kp LESS_THAN &kp EQUAL>;
+        };
+        mc_greater_equal : mc_greater_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <1>;
+            binding =
+                <&macro-tap>,
+                <&kp GREATER_THAN &kp EQUAL>;
+        };
+    };
+
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
