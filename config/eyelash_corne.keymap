@@ -57,7 +57,7 @@
             bindings = <
 &kp ESCAPE  &kp Q        &kp W       &kp E        &kp R        &kp T                         &kp UP                &kp Y  &kp U        &kp I        &kp O       &kp P                &kp BSPC
 &kp TAB     &mt LMETA A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &mt RCTRL J  &mt RSHFT K  &mt LALT L  &mt RMETA SEMICOLON  &kp SQT
-&kp CLCK    &kp Z        &kp X       &kp C        &kp V        &kp B  &kp SPACE              &kp DOWN              &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH             &kp GRAVE
+&td0        &kp Z        &kp X       &kp C        &kp V        &kp B  &kp SPACE              &kp DOWN              &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH             &kp GRAVE
                                      &kp LGUI     &lt 4 ENTER  &mo 1                                               &mo 2  &lt 3 SPACE  &kp RALT
             >;
 
