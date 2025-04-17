@@ -33,6 +33,12 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Esc/LMETA Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE>, <&kp LMETA>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
