@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '`', h: '$$mdi:apple-keyboard-shift$$', s: '~'}
-  - {t: 'Gui+$$mdi:keyboard-tab$$', h: LGUI}
+  - LGUI
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: Ctl+C, h: '$$mdi:apple-keyboard-option$$'}
   - {t: Ctl+V, h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - {t: 'Alt+$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:apple-keyboard-option$$
   NUMBER:
   - BT CLR ALL
   - {t: '1', s: '!'}
