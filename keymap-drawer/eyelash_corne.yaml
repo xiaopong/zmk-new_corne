@@ -28,7 +28,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', h: 'Sft+$$mdi:apple-keyboard-control$$', s: '"'}
+  - {t: '''', h: '$$mdi:apple-keyboard-control$$', s: '"'}
   - '&td0'
   - Z
   - X
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '`', h: '$$mdi:apple-keyboard-shift$$', s: '~'}
-  - LGUI
+  - {t: 'Gui+$$mdi:keyboard-tab$$', h: LGUI}
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
-  - $$mdi:apple-keyboard-option$$
-  - Fn
+  - {t: Ctl+C, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: Ctl+V, h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - $$mdi:apple-keyboard-option$$
+  - {t: 'Alt+$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-option$$'}
   NUMBER:
   - BT CLR ALL
   - {t: '1', s: '!'}
@@ -113,15 +113,15 @@ layers:
   - )
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '#'
-  - $
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - (
   - )
   - '|'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '-', s: _}
+  - '~'
   - {t: '=', s: +}
   - '{'
   - '}'
@@ -137,8 +137,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - _
   - +
-  - '{'
-  - '}'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - '~'
   - {t: '$$mdi:transfer$$', type: trans}
