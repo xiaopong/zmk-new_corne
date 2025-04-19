@@ -63,6 +63,34 @@
             bindings = <&kp GT &kp EQUAL>;
             label = "GREATER_EQUAL";
         };
+
+        not_equal: not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+            label = "NOT_EQUAL";
+        };
+
+        right_pointer: right_pointer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "RIGHT_POINTER";
+        };
+
+        left_pointer: left_pointer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp MINUS>;
+            label = "LEFT_POINTER";
+        };
+
+        slash_star: slash_star {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp STAR>;
+            label = "SLASH_STAR";
+        };
     };
 
     keymap {
@@ -85,7 +113,7 @@
             bindings = <
 &trans     &kp N1  &kp N2           &kp N3           &kp N4           &kp N5                                        &mmv MOVE_UP                     &kp N6       &kp N7         &kp N8    &kp N9     &kp N0  &kp BSPC
 &kp LCTRL  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT     &kp DOWN       &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT  &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &trans  &kp PG_DN
+&kp LSHFT  &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &trans  &trans
                                     &trans           &trans           &trans                                                                         &kp INS      &kp DEL        &trans
             >;
 
@@ -95,10 +123,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans     &kp EXCL  &kp AT  &kp HASH              &kp DLLR               &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR         &kp RPAR       &kp BSPC
-&kp LCTRL  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TILDE  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE       &kp GRAVE
-&kp LSHFT  &trans    &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &smaller_equal  &greater_equal   &kp BACKSLASH  &kp TILDE
-                             &trans                &trans                 &trans                                                                &trans     &trans     &trans
+&trans     &kp EXCL        &kp AT         &kp HASH              &kp DLLR               &kp PRCNT                              &mmv MOVE_UP                     &kp CARET   &kp AMPS   &kp ASTRK       &kp LPAR         &kp RPAR       &kp BSPC
+&kp LCTRL  &right_pointer  &left_pointer  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &slash_star            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &not_equal  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE       &kp GRAVE
+&kp LSHFT  &trans          &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &trans                    &mmv MOVE_DOWN                   &kp UNDER   &kp PLUS   &smaller_equal  &greater_equal   &kp BACKSLASH  &kp TILDE
+                                          &trans                &trans                 &trans                                                                  &trans      &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
