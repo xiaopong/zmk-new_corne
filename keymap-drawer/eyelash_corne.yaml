@@ -137,8 +137,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - _
   - +
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&smaller_equal'
+  - '&greater_equal'
   - {t: \, s: '|'}
   - '~'
   - {t: '$$mdi:transfer$$', type: trans}
