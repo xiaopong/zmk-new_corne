@@ -33,13 +33,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Esc/LMETA Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE>, <&kp LMETA>;
-        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -54,6 +47,22 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <100>;
+    };
+
+    macros {
+        smaller_equal: smaller_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "SMALLER_EQUAL";
+        };
+
+        greater_equal: greater_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GREATER_EQUAL";
+        };
     };
 
     keymap {
@@ -88,7 +97,7 @@
             bindings = <
 &trans     &kp EXCL  &kp AT  &kp HASH              &kp DLLR               &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR         &kp RPAR       &kp BSPC
 &kp LCTRL  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TILDE  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE       &kp GRAVE
-&kp LSHFT  &trans    &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &trans          &trans           &kp BACKSLASH  &kp TILDE
+&kp LSHFT  &trans    &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &smaller_equal  &greater_equal   &kp BACKSLASH  &kp TILDE
                              &trans                &trans                 &trans                                                                &trans     &trans     &trans
             >;
 
